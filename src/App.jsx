@@ -1,15 +1,17 @@
-import Header from "./components/Header";
-import './App.css';
+import React, { useState } from 'react';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div>
-      <Header />
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-        <h2 className="main-title">TelRoom - Peminjaman Ruangan</h2>
-        <p className="intro-text">Selamat datang di aplikasi TelRoom!</p>
-        <p className="intro-text">Klik menu di atas untuk memulai peminjaman ruangan.</p>
-      </div>
+      {isLoggedIn ? (
+        <Dashboard />
+      ) : (
+        <Login onLogin={() => setIsLoggedIn(true)} />
+      )}
     </div>
   );
 }
