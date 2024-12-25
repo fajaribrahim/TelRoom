@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Reservasi from "./Reservasi";
 
 function Home() {
   const allRooms = {
@@ -32,6 +33,7 @@ function Home() {
     ],
     DSP: [
       { id: 1, name: "DSP 201" },
+      { id: 2, name: "DSP 202" },
       { id: 2, name: "DSP 202" },
     ],
     IoT: [
@@ -223,10 +225,11 @@ function Home() {
       <div style={{
         position: "absolute", top: "20px", right: "20px", backgroundColor: "#FF0000", color: "white", padding: "10px 20px", borderRadius: "5px", fontSize: "0.8rem"
       }}>
-        Hai, Sausan
+        Hai, Sausan!
       </div>
     </div>
   );
 }
 
 export default Home;
+
