@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/login';
-import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
+import Reservasi from './pages/Reservasi';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -10,12 +10,16 @@ function App() {
   return (
     <Router>
       <Routes>
-        {!isLoggedIn ? (
-          <Route path="/" element={<Login onLogin={() => setIsLoggedIn(true)} />} />
+        {isLoggedIn ? (
+          <>
+            <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/reservasi" element={<Reservasi />} />
+          </>
         ) : (
           <>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Login onLogin={() => setIsLoggedIn(true)} />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </>
         )}
       </Routes>

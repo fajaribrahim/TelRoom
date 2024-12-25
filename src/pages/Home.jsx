@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Reservasi from "./Reservasi";
+import { Link } from 'react-router-dom'; // Import Link
 
 function Home() {
   const allRooms = {
@@ -113,11 +113,11 @@ function Home() {
           {/* Form Fields */}
           <div style={{ marginBottom: "1rem" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <button style={{
-                backgroundColor: "#FF0000", color: "white", padding: "10px 20px", border: "none", borderRadius: "5px", cursor: "pointer", fontSize: "0.8rem"
+              <Link to="/reservasi" style={{
+                backgroundColor: "#FF0000", color: "white", padding: "10px 20px", border: "none", borderRadius: "5px", cursor: "pointer", fontSize: "0.8rem", textDecoration: "none"
               }}>
                 + Reservasi
-              </button>
+              </Link>
               <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
                 {/* Lokasi */}
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
@@ -232,4 +232,3 @@ function Home() {
 }
 
 export default Home;
-
