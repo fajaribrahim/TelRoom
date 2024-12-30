@@ -24,7 +24,7 @@ function Login({ onLogin }) {
       height: "100vh",
       width: "100vw",
       margin: 0,
-      backgroundImage: "url('/background.jpg')",
+      backgroundImage: "url('/background1.jpg')",
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",

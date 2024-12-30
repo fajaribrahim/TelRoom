@@ -4,19 +4,19 @@ const roomDescriptions = [
   {
     id: 1,
     name: "Lab Data (DC 103)",
-    image: "/images/lab-data-dc103.jpg", // Ganti dengan path gambar
+    image: "/images/lab-data-dc103.jpg", //path gambar
     description: "Laboratorium Data, dilengkapi dengan perangkat komputer modern dan proyektor.",
   },
   {
     id: 2,
     name: "Lab Jaringan Komputer (DC 305)",
-    image: "/images/lab-jaringan-dc305.jpg", // Ganti dengan path gambar
+    image: "/images/lab-jaringan-dc305.jpg", //path gambar
     description: "Laboratorium untuk simulasi jaringan komputer, dilengkapi dengan router dan switch.",
   },
   {
     id: 3,
     name: "Ruang Diskusi",
-    image: "/images/ruang-diskusi.jpg", // Ganti dengan path gambar
+    image: "/images/ruang-diskusi.jpg", //path gambar
     description: "Ruang diskusi dengan kapasitas 10 orang, nyaman untuk brainstorming dan kerja kelompok.",
   },
 ];
