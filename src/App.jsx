@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Login from './pages/login';
 import Home from './pages/Home';
 import Reservasi from './pages/Reservasi';
+import History from './pages/History';
+import DeskripsiRuangan from './pages/DeskripsiRuangan'; 
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -15,6 +17,8 @@ function App() {
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
             <Route path="/reservasi" element={<Reservasi />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/deskripsi-ruangan" element={<DeskripsiRuangan />} /> {/* Tambahkan rute Deskripsi Ruangan */}
           </>
         ) : (
           <>

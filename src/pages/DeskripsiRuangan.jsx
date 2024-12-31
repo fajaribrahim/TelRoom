@@ -3,44 +3,38 @@ import React from "react";
 const roomDescriptions = [
   {
     id: 1,
-    name: "Lab Data (DC 103)",
-    image: "/images/lab-data-dc103.jpg", //path gambar
-    description: "Laboratorium Data, dilengkapi dengan perangkat komputer modern dan proyektor.",
-  },
-  {
-    id: 2,
-    name: "Lab Jaringan Komputer (DC 305)",
-    image: "/images/lab-jaringan-dc305.jpg", //path gambar
-    description: "Laboratorium untuk simulasi jaringan komputer, dilengkapi dengan router dan switch.",
-  },
-  {
-    id: 3,
-    name: "Ruang Diskusi",
-    image: "/images/ruang-diskusi.jpg", //path gambar
-    description: "Ruang diskusi dengan kapasitas 10 orang, nyaman untuk brainstorming dan kerja kelompok.",
+    name: "Ruang Kelas (DC 103)",
+    image: "/ruang-kelas.jpg",
+    description: "Ruang kelas dengan kapasitas 50 orang, dilengkapi dengan proyektor, papan tulis, dan pendingin ruangan.",
   },
 ];
 
 function DeskripsiRuangan() {
+  console.log("Halaman Deskripsi Ruangan dimuat!");
+
   return (
     <div style={{ padding: "20px" }}>
       <h2 style={{ color: "#FF0000", textAlign: "center", marginBottom: "20px" }}>
         Deskripsi Ruangan
       </h2>
-      <div style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        gap: "20px",
-      }}>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-around",
+        }}
+      >
         {roomDescriptions.map((room) => (
-          <div key={room.id} style={{
-            width: "300px",
-            border: "1px solid #ddd",
-            borderRadius: "10px",
-            overflow: "hidden",
-            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
-          }}>
+          <div
+            key={room.id}
+            style={{
+              border: "1px solid #ccc",
+              borderRadius: "8px",
+              margin: "10px",
+              width: "300px",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            }}
+          >
             <img
               src={room.image}
               alt={room.name}
@@ -48,11 +42,13 @@ function DeskripsiRuangan() {
                 width: "100%",
                 height: "200px",
                 objectFit: "cover",
+                borderTopLeftRadius: "8px",
+                borderTopRightRadius: "8px",
               }}
             />
-            <div style={{ padding: "15px" }}>
-              <h3 style={{ color: "#FF0000", marginBottom: "10px" }}>{room.name}</h3>
-              <p style={{ fontSize: "14px", color: "#333" }}>{room.description}</p>
+            <div style={{ padding: "10px" }}>
+              <h3 style={{ margin: "0 0 10px 0", color: "#333" }}>{room.name}</h3>
+              <p style={{ color: "#555" }}>{room.description}</p>
             </div>
           </div>
         ))}

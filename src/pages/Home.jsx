@@ -119,8 +119,13 @@ function Home() {
           <button style={{
             backgroundColor: "white", color: "#FF0000", padding: "5px 20px", border: "none", borderRadius: "5px", cursor: "pointer", marginBottom: "10px", fontSize: "0.7rem"
           }}>
+            <Link to="/history" style={{
+              textDecoration: "none", 
+              color: "#FF0000"
+            }}>
             History
-          </button>
+          </Link>
+        </button>
           <button style={{
             backgroundColor: "white", color: "#FF0000", padding: "5px 20px", border: "none", borderRadius: "5px", cursor: "pointer", fontSize: "0.7rem"
           }}>
@@ -134,8 +139,26 @@ function Home() {
         }}>
           {/* Header */}
           <header style={{
-            backgroundColor: "white", color: "#FF0000", padding: "0.5rem 2rem", textAlign: "left", borderRadius: "5px", marginBottom: "0.9rem", fontWeight: "bold", fontSize: "0.6rem"
+            backgroundColor: "white", 
+            color: "#FF0000", 
+            padding: "0.5rem 2rem", 
+            borderRadius: "5px", 
+            marginBottom: "0.9rem", 
+            fontWeight: "bold", 
+            fontSize: "0.6rem", 
+            display: "flex", 
+            alignItems: "center", 
+            gap: "10px" // Memberikan jarak antara ikon dan teks
           }}>
+            <img 
+              src="schedule.png" 
+              alt="Schedule Icon" 
+              style={{
+                width: "40px", 
+                height: "40px", 
+                marginRight: "10px",
+              }} 
+            />
             <h1>Room Reservation</h1>
           </header>
 
@@ -252,10 +275,29 @@ function Home() {
       </div>
       {/* Greeting */}
       <div style={{
-        position: "absolute", top: "20px", right: "20px", backgroundColor: "#FF0000", color: "white", padding: "10px 20px", borderRadius: "5px", fontSize: "0.8rem"
+        position: "absolute", 
+        top: "20px", 
+        right: "20px", 
+        backgroundColor: "#FF0000", 
+        color: "white", 
+        padding: "10px 20px", 
+        borderRadius: "5px", 
+        fontSize: "0.8rem", 
+        display: "flex", 
+        alignItems: "center"
       }}>
-        Hai, Sausan!
-      </div>
+      <img 
+        src="akun.png" 
+        alt="Akun" 
+        style={{
+          width: "20px", 
+          height: "20px", 
+          marginRight: "10px"
+        }} 
+      />
+      Hai, Sausan!
+    </div>
+
     </div>
   );
 }

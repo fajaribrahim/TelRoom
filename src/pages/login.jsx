@@ -31,7 +31,7 @@ function Login({ onLogin }) {
     }}>
       <div style={{
         textAlign: "center",
-        color: "#FF0000",
+        color: "#FF000B",
         fontWeight: "bold",
         position: "absolute",
         top: "10%",
@@ -39,10 +39,12 @@ function Login({ onLogin }) {
         <h1 style={{
           fontSize: "2.5rem",
           margin: 0,
+          textShadow: "2px 2px 8px rgba(255, 255, 255, 0.8), -2px -2px 8px rgba(255, 255, 255, 0.8)" // Efek bayangan putih untuk teks lainnya
         }}>TelRoom</h1>
         <p style={{
           fontSize: "1.2rem",
           marginTop: "0.5rem",
+          textShadow: "2px 2px 15px rgba(255, 255, 255, 0.8), -2px -2px 15px rgba(255, 255, 255, 0.8)" // Efek bayangan putih untuk teks lainnya
         }}>Hello! Welcome to TelRoom</p>
       </div>
 
@@ -58,7 +60,8 @@ function Login({ onLogin }) {
         <form onSubmit={handleSubmit}>
           <h2 style={{
             textAlign: "center",
-            marginBottom: "1.5rem",
+            marginBottom: "3rem",
+            marginTop: "-0.7rem",// Mengurangi margin top agar tulisan lebih naik
           }}>
             SSO LOGIN
           </h2>
@@ -69,14 +72,17 @@ function Login({ onLogin }) {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               style={{
-                width: "100%",
+                width: "80%",
                 padding: "10px",
+                margin: "0 auto 1rem auto", // Margin auto di kiri dan kanan untuk menengahkan input
                 marginBottom: "1rem",
                 border: "1px solid #ddd",
                 borderRadius: "5px",
                 fontSize: "1rem",
                 backgroundColor: "white",
                 color: "black",
+                display: "block", // Agar margin auto berfungsi dengan baik
+                textAlign: "left" // Untuk memastikan teks di dalam input tetap di tengah
               }}
             />
           </div>
@@ -87,14 +93,17 @@ function Login({ onLogin }) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               style={{
-                width: "100%",
+                width: "80%",
                 padding: "10px",
+                margin: "0 auto 1rem auto", // Margin auto di kiri dan kanan untuk menengahkan input
                 marginBottom: "1rem",
                 border: "1px solid #ddd",
                 borderRadius: "5px",
                 fontSize: "1rem",
                 backgroundColor: "white",
                 color: "black",
+                display: "block", // Agar margin auto berfungsi dengan baik
+                textAlign: "left" // Untuk memastikan teks di dalam input tetap di tengah
               }}
             />
           </div>
